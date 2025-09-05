@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Education Journey</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(to right, #01022d, #000);
+    }
+
+    .education-section {
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .section-title {
+      font-size: 2.5rem;
+      color: #222;
+      position: relative;
+      margin-bottom: 10px;
+      color: #fff;
+    }
+
+    .section-subtitle {
+      font-size: 1.1rem;
+      color: #555;
+      margin-bottom: 40px;
+      color: #fff;
+    }
+
+    .timeline {
+      position: relative;
+      max-width: 800px;
+      margin: 0 auto;
+      padding-left: 40px;
+      text-align: left;
+    }
+
+    .timeline::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 28px;
+      width: 4px;
+      height: 100%;
+      background-color: #007acc;
+      border-radius: 2px;
+    }
+
+    .edu-card {
+      position: relative;
+      background: #fff;
+      margin: 30px 0;
+      padding: 25px 30px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+      border-radius: 8px;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeInUp 0.6s forwards;
+    }
+
+    .edu-card:nth-child(1) { animation-delay: 0.1s; }
+    .edu-card:nth-child(2) { animation-delay: 0.3s; }
+    .edu-card:nth-child(3) { animation-delay: 0.5s; }
+
+    .edu-card::before {
+      content: "🎓";
+      position: absolute;
+      left: -3.5rem;
+      top: 20px;
+      font-size: 1.5rem;
+      background-color: #fff;
+      border: 3px solid #007acc;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      line-height: 34px;
+      text-align: center;
+      color: #007acc;
+      z-index: 2;
+    }
+
+    .edu-card.current::before {
+      content: "💻";
+      border-color: #f39c12;
+      color: #f39c12;
+    }
+
+    .edu-card.future::before {
+      content: "🚀";
+      border-color: #27ae60;
+      color: #27ae60;
+    }
+
+    .edu-card h3 {
+      font-size: 1.5rem;
+      color: #007acc;
+      margin-bottom: 10px;
+    }
+
+    .edu-card p {
+      font-size: 1rem;
+      color: #444;
+      margin: 5px 0;
+    }
+
+    .edu-year {
+      font-style: italic;
+      color: #666;
+    }
+
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+  <section id="education" class="education-section">
+    <h1 class="section-title">📘 My Education </h1>
+    <h2 class="section-subtitle"> Yuvraj Dixit (Aspirant DevOps Engineer  🚀)</h2>
+
+    <div class="timeline">
+      <div class="edu-card">
+        <h3>10th Standard</h3>
+        <p><strong>Board:</strong> Bihar School Examination Board (BSEB)</p>
+        <p><strong>Location:</strong> Gopalganj,Bihar, India</p>
+        <p class="edu-year">🎓 Completed</p>
+      </div>
+
+      <div class="edu-card current">
+        <h3>Diploma in Computer Science</h3>
+        <p><strong>Institute:</strong> IIMT university Greater Noida</p>
+        <p><strong>Status:</strong> Final Year (Pursuing)</p>
+        <p class="edu-year">📅 2023 - 2026 (Expected)</p>
+      </div>
+
+      <div class="edu-card future">
+        <h3>Future Goal: DevOps Engineer</h3>
+        <p>I am deeply passionate about automation, CI/CD pipelines, cloud platforms & scalable systems.</p>
+        <p class="edu-year">🚀 Next Step: DevOps Mastery</p>
+      </div>
+    </div>
+  </section>
+</body>
+</html>
